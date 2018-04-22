@@ -15,6 +15,7 @@ find_package(Qt4 REQUIRED)
 include_directories(${QT_INCLUDES})
 
 include_directories("${CMAKE_SOURCE_DIR}/src")
+include_directories("${CMAKE_SOURCE_DIR}/pdfio/src")
 
 add_subdirectory(src/qpdfio/pdf1_0)
 add_subdirectory(test/qpdfio/pdf1_0)

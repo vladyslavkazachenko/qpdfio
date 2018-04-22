@@ -1,6 +1,8 @@
 #pragma once
 
 #include "QWidget"
+#include "QErrorMessage"
+#include "document_view_ctl.h"
 
 namespace qpdfio
 {
@@ -17,6 +19,15 @@ public:
    
 public slots:
    void loadFile(const QString &fullFileName);
+   void processFileLoadingFail();
+   
+signals:
+   void fileSelected(const QString &);
+   void fileLoadingFailed(const QString &);
+   
+private:
+   DocumentViewCtl ctl_;
+   QErrorMessage errorMsg_;
 };
    
 }
